@@ -8,9 +8,7 @@
 
 ---
 
-## I. 简介 / Introduction
-
-本仓库提供论文《ADCMT: An Augmentation-Free Dynamic Contrastive Multi-Task Transformer for UGC-VQA》的官方代码与复现说明。ADCMT 针对用户生成内容（UGC）视频中的复杂失真和数据稀缺，提出了一种**无需数据增强**的多任务对比学习 Transformer 框架，有效提升了视频质量评价（VQA）任务的精度与泛化能力。
+## I. Introduction
 
 This repository provides the official implementation and reproduction instructions for our IEEE TBC 2025 paper:  
 **ADCMT: An Augmentation-Free Dynamic Contrastive Multi-Task Transformer for UGC-VQA**.  
@@ -20,37 +18,33 @@ ADCMT tackles the complex multi-source distortions in user-generated videos with
 
 ---
 
-## II. 快速开始 / Quick Start
+## II.  Quick Start
 
-1. 克隆仓库 / Clone the repository
+1. Clone the repository
 
    ```bash
    git clone https://github.com/kbzhang0505/ADCMT.git
    cd ADCMT
    ```
 
-2. 数据集准备 / Prepare Datasets
-
-   本项目支持 KoNViD-1k、CVD2014、LIVE-Qualcomm、LIVE-VQC、YouTube-UGC、LSVQ-Subset 等主流 UGC-VQA 数据集。**请首先离线提取帧级视频特征，并根据 `data/` 目录下的元文件进行数据集划分与管理。** 本项目的文件结构如下所示：
+2. Prepare Datasets
 
    This project supports mainstream UGC-VQA datasets, including KoNViD-1k, CVD2014, LIVE-Qualcomm, LIVE-VQC, YouTube-UGC, and LSVQ-Subset. **Please extract frame-level video features offline in advance, and organize dataset splits and management according to the meta files provided under the `data/` directory.** The file structure of this project is organized as follows:
 
    ```bash
    ADCMT/
-   ├── data/                  # 数据集元文件及划分 / Dataset meta files and splits
-   ├── models/                # 模型实现 / Model implementations
-   ├── modules/               # 方法模块 / Method modules
-   ├── tools/                 # 工具函数 / Utility functions
-   ├── main_ADCMT.py          # 训练入口 / Main training entry
-   ├── sample_LSVQ.py         # LSVQ数据集子集采样 / LSVQ subset sampling script
-   ├── shell_ADCMT.py         # 重复实验运行脚本 / Batch experiment shell script
-   ├── V_feat_Dataset.py      # PyTorch数据集类定义 / PyTorch Dataset class definition
-   ├── README.md              # 项目说明文档 / Project documentation
+   ├── data/                  # Dataset meta files and splits
+   ├── models/                # Model implementations
+   ├── modules/               # Method modules
+   ├── tools/                 # Utility functions
+   ├── main_ADCMT.py          # Main training entry
+   ├── sample_LSVQ.py         # LSVQ subset sampling script
+   ├── shell_ADCMT.py         # Batch experiment shell script
+   ├── V_feat_Dataset.py      # PyTorch Dataset class definition
+   ├── README.md              # Project documentation
    ```
-
-3. 特征提取 / Feature Extraction
-
-   推荐使用论文中相同的预训练 ResNet50 进行帧级特征提取，脚本参考 `tools/CNN_feature_generator.py`。
+   
+3. Feature Extraction
 
    It is recommended to use the same ResNet50 model as in the paper for frame-level feature extraction. Please refer to the script `tools/CNN_feature_generator.py`.
 
@@ -60,9 +54,7 @@ Noting that the results may be still not the same among different implement devi
 
 ---
 
-## III. 引用本论文 / Citation
-
-如果本项目或论文对您的研究有帮助，欢迎引用以下论文：
+## III. Citation
 
 If you find this work or code useful in your research, please consider citing our paper:
 
