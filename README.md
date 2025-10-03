@@ -64,10 +64,10 @@ If you find this work or code useful in your research, please consider citing ou
   journal={IEEE Transactions on Broadcasting}, 
   title={ADCMT: An Augmentation-Free Dynamic Contrastive Multi-Task Transformer for UGC-VQA}, 
   year={2025},
-  volume={},
-  number={},
-  pages={1-16},
-  keywords={Augmentation-free;multi-task transformer;supervised contrastive learning;user generated content;video quality assessment},
+  volume={71},
+  number={3},
+  pages={833-848},
+  keywords={Videos;Quality assessment;Contrastive learning;Distortion;Feature extraction;Transformers;Multitasking;Degradation;Convolutional neural networks;User-generated content;Augmentation-free;multi-task transformer;supervised contrastive learning;user generated content;video quality assessment},
   doi={10.1109/TBC.2025.3565888}}
 ```
 
